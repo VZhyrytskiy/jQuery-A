@@ -74,37 +74,42 @@ $(document).ready(function(){
 
     // Ru: Задание 1. Получить текстовое значение элемента <textarea> и вывести в консоль
     // En: Task 1. Get the text value of the element <textarea> and print it to the console.
-
-
+    // console.log( $("textarea").val() );
 
     // Ru: Задание 2. Установить в 1-ое текстовое поле текст "Some text in first input element"
     // En: Task 2. Set the text "Some text in first input element" to the 1-st text field.
-
-
+    // $("input[type=text]:first").val("Some text in first input element");
 
     // Ru: Задание 3. Установить состояние 'отмечен' для элементов с значениями атрибута value - 'check2', 'check3', 'Rv1'. Использовать массив.
     // En: Task 3. Set the state 'checked' for the elements with values 'check2', 'check3' and 'Rv1' in their attribute 'value'. Use array.
-
-
+    // $("input:checkbox, input:radio").val(["check2", "check3", "Rv1"]);
 
     // Ru: Задание 4. Используя конструкцию $("select").on("change", function(){...}) получить выбранное значение элемента и вывести его в консоль.
     // En: Task 4. Using construction $("select").on("change", function(){...}) get the selected value of the element and print it to the console.
-
-
+    // $("select").on("change", function(){
+    //     console.log($(this).val());
+    // });
 
     // Ru: Задание 5. Преобразовывать значение 2-го текстового поля в верхний регистр, когда пользователь кликает по кнопке btnUpperCase. Использовать toUpperCase().
     // En: Task 5. Transfor the text value of the 2-nd text field in upper case when user click the button btnUpperCase. Use toUpperCase().
-
-
+    // $("#btnUpperCase").on("click", function() {
+    //     $("input[type=text]:eq(1)").val(function(i, oldVal) {
+    //         return oldVal.toUpperCase();
+    //     });
+    // });
 
     // Ru: Задание 6. Получить текстовое значение из элемента <textarea> и добавить его в элемент <label> перед элементом <textarea>. Результат "text: текст из textarea." Использовать метод .text( string ).
     // En: Task 6. Get the text value from the elememnt <textarea> and add it to the element <label> which there is before element <textarea>. Result: "text: text from textarea". Use method .text( string ).
-
-
+    // $('textarea').prev().prev().text( function(id, old){
+    //     return `${old} ${$('textarea').val()}`;
+    // });
 
     // Ru: Задание 7. Реализовать функциональность: при выборе количества недель из <select id="number_of_weeks"> добавлять красную рамку элементам div в блоке <div id="divs">, так чтобы: при выборе 1 Week, рамка была у первого блока, при выборе 2 Weeks, рамка была у первого и второго блока, при выборе 3 Weeks, рамка была у первого, второго, третьего блока. Использовать конструкцию $("#number_of_weeks").on("change", function(){...});
     // En: Task 7. Create feature: add red border to the elements <div> in the element <div id="divs">' when user selects the number of weeks in the following way: when user selects 1 Week - add red border to the 1-st block, when user selects 2 Weeks - add red border to the 1-st and 2-nd block and when user selects 3 Weeks - add red border to the 1-st, 2-nd and 3-rd blocks. Use construction $("#number_of_weeks").on("change", function(){...});
-
+    // $("#number_of_weeks").on("change", function(){
+    //     $("#divs").children(".sel").removeClass("sel");
+    //     $("#divs").children("#" + $(this).val()).prevAll().addBack().addClass("sel");
+    // });
 
 });
 </script>

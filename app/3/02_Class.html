@@ -23,41 +23,48 @@ $(document).ready(function(){
 
     // Ru: Задание 1. У 1-го элемента <div> удалить класс 'sel2' и добавить класс 'sel3'.
     // En: Task 1. Remove class 'sel' and add class 'sel3' for the 1-st element <div>.
-
-
+    // $("div:first").toggleClass("sel2 sel3");
+    // $("div:eq(0)")
+    //     .removeClass("sel2")
+    //     .addClass("sel3");
 
     // Ru: Задание 2. Выбрать все элементы <div>. Если у элемента есть класс 'sel2', то ему добавить еще и класс 'sel3'.
     // En: Task 2. Select all elements <div>. If element <div> has class 'sel2' then add class 'sel3' to it.
+    // $("div").addClass(function() {
+    //     if ( $(this).hasClass("sel2") ) {
+    //         return "sel3";
+    //     };
+    // });
 
-
-
+    // $("div").filter(".sel2").addClass("sel3").end();
 
     // Ru: Задание 3. Выбрать все элементы <div>. Если у элемента есть классы 'sel' и 'sel2', то удалить класс 'sel2'.
     // En: Task 3. Select all elements <div>. If element has classes 'sel' and 'sel2' then remove class 'sel2'.
-
-
+    // $("div").filter(".sel.sel2").removeClass("sel2");
 
     // Ru: Задание 4. При каждом нечетном клике пользователя на 2-ой элемент <div> добавлять ему класс 'sel', при четном клике - удалять класс 'sel'.
     // En: Task 4. Add class 'sel' to the 2-nd element <div> on each odd user's click on the element <div> and remove class 'sel' from the one on each even user's click on the element <div>.
-
-
-
-
+    // $("div:eq(1)").on("click", function() {
+    //     $(this).toggleClass("sel");
+    // });
 
     // Ru: Задание 5. При каждом третьем клике на 4 элемент <div> добавлять класс 'sel', при остальных кликах, убирать.
     // En: Task 5. Add class 'sel' to the 4-th element <div> on each 3-rd user's click on this element and remove class 'sel' otherwise.
+    // $("div:eq(3)").prop("clickCnt", 0).on("click", function(){
+    //     const $this = $(this);
 
+    //     $this.prop("clickCnt", function(i, v) {
+    //         return v + 1;
+    //     });
 
-
-
-
+    //     $this.toggleClass("sel", ($this.prop("clickCnt") % 3 == 0));
+    // });
 
     // Ru: Задание 6. При клике на 2 и 3 элементах <div> переключать классы: если у элемента есть класс 'sel3', то заменить на 'sel2' и наоборот.
     // En: Task 6. Switch classes when user clicks on the 2-nd and 3-rd elements <div>: if element has class 'sel3' then change it on 'sel2' and vice versa.
-
-
-
-
+    //  $("div").slice(1,3).on("click", function(){
+    //     $(this).toggleClass("sel3 sel2");
+    // });
 
 });
 </script>
