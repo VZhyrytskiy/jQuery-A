@@ -92,49 +92,42 @@ $(document).ready(function(){
 
     // Ru: Задание 1. Получить количество дочерних элементов 'p' у элемента с id='container' и вывести их в консоль.
     // En: Task 1. Get the number of child elements 'p' of the element with id='container' and show it in console.log.
-
-
+    // console.log($("#container").children("p").length);
 
     // Ru: Задание 2. Получить все сестринские элементы у элемента с id='notli', не потерять текущий элемент, добавить всем нечетным элементам в jQuery объекте класс 'sel'.
     // En: Task 2. Get all sibling elements of the element with id='notli', keep the current element in jQuery object and add class 'sel' to all odd elements in jQuery object.
-
-
+    // $("#notli").siblings().addBack().filter(":even").addClass('sel');
 
     // Ru: Задание 3. Найти ближайшего предка 'ul' для элемента c id='notli', добавить ему класс 'sel3'.
     // En: Task 3. Find the closest parent 'ul' for the element with id='notli', add class 'sel3' to it.
-
-
+    // $("#notli").closest("ul").addClass("sel");
 
     // Ru: Задание 4. В элементе 'div' с id='div2' найти внутренний список и добавить его элементам 'li' класс 'sel2'.
     // En: Task 4. In the element 'div' with id='div2' find the nested list 'ul' and add class 'sel2' to its child elements 'li'.
-
+    // $("#div2").find("ul ul > li").addClass('sel');
 
 
     // Ru: Задание 5. Получить следующий элемент после элемента '<button disabled="disabled">' и добавить ему класс 'sel3'.
     // En: Task 5. Get the next element after the element '<button disabled="disabled">' and add class 'sel3' to it.
-
-
+    // $("button:disabled").next().addClass('sel3');
 
     // Ru: Задание 6. Добавить всем элементам 'span', которые идут после элемента '<p id="p2" class="c1">' класс 'sel2'.
     // En: Task 6. Add class 'sel2' to all elements 'span' which flows after element '<p id="p2" class="c1">'.
-
-
+    // $("#p2").nextAll("span").addClass('sel2');
 
     // Ru: Задание 7. Всем элементам 'p', которые идут после элемента '<div class="c3">' и до элемента '<span class="c1">' добавить класс 'sel4'.
     // En: Task 7. Add class 'sel4' to all elements 'p' which flows between element '<div class="c3">' and '<span class="c1">'.
-
-
+    // $("div.c3").nextUntil("span.c1", "p").addClass('sel4');
 
     // Ru: Задание 8. Получить родителя элемента <li id="notli">, если это элемент с id='inner', вывести в консоль строчку 'Элемент с id="inner" является родителем элемента "li"'
     // En: Task 8. Get the parent of the element <li id="notli">. If there is element with id='inner' show the string 'Element with id="inner" is the parent of li' in console.log.
-
-
-
-
+    // if ( $("#notli").parent("#inner").length ) {
+    //     console.log('Элемент с id="inner" является родителем элемента "li"');
+    // }
 
     // Ru: Задание 9. Позиционированному предку элемента с id='notli' добавить класс 'sel4'.
     // En: Task 9. Add class 'sel4' to the offset parent of the element with id='notli'.
-
+    // $("#notli").offsetParent().addClass('sel4');
 
 });
 </script>

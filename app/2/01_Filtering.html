@@ -85,60 +85,64 @@ $(document).ready(function(){
 
     // Ru: Задание 1. Всем элементам 'р' добавить класс 'sel', а второму элементу 'p' дополнительно добавить класс 'sel2'.
     // En: Task 1. Add class 'sel' to all elements 'p' and additionally add class 'sel2' to the 2-nd element 'p'.
-
-
+    // $("p").addClass("sel").eq(1).addClass("sel2");
 
     // Ru: Задание 2. Всем элементам 'р' добавить класс 'sel', 2-му элементу 'p' дополнительно установить класс 'sel2', а 3-му элементу 'p' дополнительно установить класс 'sel3'.
     // En: Task 2. Add class 'sel' to all elements 'p' and additionally add class 'sel2' to the 2-nd element 'p' and additionally add class 'sel3' to the 3-rd element 'p'.
-
-
-
-
+    // $("p").addClass("sel")
+    //     .eq(1).addClass("sel2").end()
+    //     .eq(2).addClass("sel3");
 
     // Ru: Задание 3. Выбрать все элементы 'p', первому из них добавить класс 'blue', последнему из них добавить класс 'black'.
     // En: Task 4. Select all elements 'p'. Add class 'blue' to the first element 'p' and add class 'black' to the last element 'p'.
-
-
+    // $("p")
+    //     .first().addClass('blue').end()
+    //     .last().addClass('black');
 
     // Ru: Задание 4. 2, 3, 4 элементам 'li' внутреннего списка добавить класс 'yellow'.
     // En: Task 4. Add class 'yellow' to the 2-nd, 3-rd, 4-th elements 'li' of nested list 'ul'.
-
-
+    // $("#inner > li").slice(1, 4).addClass('yellow');
 
     // Ru: Задание 5. 2, 4 элементам 'li' внутреннего списка добавить класс 'text-blue'.
     // En: Task 5. Add class 'text-blue' to the 2-nd, 4-th elements 'li' of nested list 'ul'.
-
-
-
+    // $("#inner > li").filter(':eq(1), :eq(3)').addClass('text-blue');
 
     // Ru: Задание 6. Всем пунктам внутреннего списка, кроме 2, 5 добавить класс 'sel2' (использовать not(function(){})).
     // En: Task 6. Add class 'sel2' to all elements 'li' of nested list 'ul' except 2-nd and 5-th elements. (use not(function(){}))
-
-
+    // $("#inner > li").not(function(index) {
+    //     return index == 1 || index == 4;
+    // }).addClass('sel2');
 
     // Ru: Задание 7. Выбрать все элементы 'p'. Если среди них существует элемент с классом 'c1', вывести alert('p.c1 существует').
     // En: Task 7. Select all elements 'p'. If there exists an element with class 'c1' among them, show alert('p.c1 exist').
-
-
+    // if ($("p").is(".c1")) {
+    //     alert("p.c1 exist");
+    // }
 
     // Ru: Задание 8. Выбрать все элементы 'div' и добавить класс 'black' тому элементу 'div', который содержит список 'ul'.
     // En: Task 8. Select all elements 'div' and add class 'black' to the element which contains list 'ul'.
-
-
+    // $("div").has("ul").addClass('black');
 
     // Ru: Задание 9. Выбрать все элементы внешнего списка 'ul'. Четным добавить класс 'sel', нечетным - 'blue'.
     // En: Task 9. Select all elements of outer list 'ul'. Add class 'sel' to the even elements 'li' and add class 'blue' to the odd elements of outer list 'ul'.
-
-
+    // $(".topnav > li")
+    //     .filter(":odd").addClass('sel').end()
+    //     .filter(":even").addClass('blue');
 
     // Ru: Задание 10. Выбрать элементы 'li' внутреннего списка 'ul'. Создать функцию для .filter(), которая поможет отфильтровать 1-ый, 4-ый и 5-ый элементы и добавить им класс 'sel2'.
     // En: Task 10. Select all elements 'li' of nested list 'ul'. Create function for .filter(), which helps to filter 1-st, 4-th and 5-th elements 'li' and then add class 'sel2' to them.
-
-
+    // $("#inner > li").filter(function(index) {
+    //     return index == 0 || index == 3 || index == 4;
+    // }).addClass('sel2');
 
     // Ru: Задание 11. Выбрать все элементы 'li' внутреннего списка 'ul'. Четным добавить класс 'sel3', первому четному дополнительно добавить класс 'sel', последнему четному дополнительно добавить класс 'sel2', нечетным добавить класс 'blue'.
     // En: Task 11. Select all elements 'li' of nested list 'ul'. Add class 'sel3' to the even elements 'li', additionally add class 'sel' to the first even element 'li', additionally add class 'sel2' to the last even element 'li' and add class 'blue' to the odd elements 'li'.
-
+    // $("#inner > li")
+    //     .filter(":odd").addClass('sel3')
+    //         .first().addClass('sel').end()
+    //         .last().addClass('sel2').end()
+    //     .end()
+    //     .filter(":even").addClass('blue');
 
 
 });

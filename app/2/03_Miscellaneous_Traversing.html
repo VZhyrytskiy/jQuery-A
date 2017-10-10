@@ -70,19 +70,16 @@ $(document).ready(function(){
 
     // Ru: Задание 1. Выбрать элемент 'p' с id='p1', добавить в объект jQuery элемент 'p' с id='p2', добавить им класс 'sel'.
     // En: Task 1. Select element 'p' with id='p1', add element 'p' with id='p2' to the same jQuery object. Add class 'sel' to them.
-
+    // $("#p1").add("#p2").addClass('sel');
 
 
     // Ru: Задание 2. Выбрать элемент 'p' с id='p1', добавить в jQuery объект элемент <span id='sp1'>Red Text in Span</span>, добавить им класс 'sel2'.
     // En: Task 2. Select element 'p' with id='p1', add element <span id='sp1'>Red Text in Span</span> to the same jQuery object. Add class 'sel2' to them.
-
-
+    // $("#p1").add("<span id='sp1'>Red Text in Span</span>").addClass('sel');
 
     // Ru: Задание 3. Выбрать элемент 'p' с id='p1', добавить в jQuery объект элемент 'li.l1', который находится во внутреннем списке. (Использовать контекст, document.getElementById("inner") или $()[], или $().get(0)). Добавить им класс 'sel3'.
     // En: Task 3. Select element 'p' with id='p1', add element 'li.l1' which is in nested list 'ul' to the same jQuery object. (Use context document.getElementById("inner") or $()[], or $().get(0) for selecting element 'li.l1'). Add class 'sel3' to them.
-
-
-
+    // $("p#p1").add("li.l1", document.getElementById("inner")).addClass("sel3");
 
 });
 </script>
