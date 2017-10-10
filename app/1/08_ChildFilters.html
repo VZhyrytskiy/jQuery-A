@@ -123,20 +123,17 @@ $( document ).ready(function(){
 
     // Ru: Задание 1. Выбрать элемент <div>, который является единственным дочерним элементом у своего родителя и применить красную рамку к нему.
     // En: Task 1. Select element <div> which is only one child of its parent and apply red border to it.
-
-
-
-
+    // $("div:only-child").addClass('sel');
 
     // Ru: Задание 2. Выбрать каждый третий элемент <li> у вложенного списка <ul> и применить красную рамку к ним.
     // En: Task 2. Select each 3-rd element <li> of nested list <ul> and apply red border to them.
-
-
+    // $(".topnav ul>li:nth-child(3n)").addClass('sel');
 
     // Ru: Задание 3. Выбрать в каждом ряду в элементе <tbody> ячейки, которые содержат следующие данные: quantity, price, discount.
     // En: Task 3. Select in each row in element <tbody> cells which contain following data: quantity, price, discount.
-
-
+    // $("tbody td:nth-child(7n+3), tbody td:nth-child(7n+4), tbody td:nth-child(7n+6)").addClass("sel");
+    // or
+    // $("tbody td:nth-child(3), tbody td:nth-child(4), tbody td:nth-child(6)").addClass("sel");
 
 });
 </script>

@@ -36,20 +36,15 @@ $( document ).ready(function(){
 
     // Ru: Задание 1. Выбрать все элементы <input> без атрибута 'id' и применить красную рамку к ним.
     // En: Task1. Select all element <input> without attribute 'id' and apply red border to them.
-
-
-
+    // $(":input:not('[id]')").addClass("sel");
 
     // Ru: Задание 2. Выбрать все элементы <a>, чей атрибут 'hreflang' содержит значение 'en' и дефис и применить крассную рамку к ним.
     // En: Task 2. Select all alememts <a> which attribute 'hreflang' contains the value 'en' and hyphen and apply red border to them.
-
-
-
+    // $('a[hreflang|="en"]').addClass("sel");
 
     // Ru: Задание 3. Выбрать все элементы <input>, чей атрибут 'name' содержит значение 'man' и применить красную рамку к ним.
     // En: Task 3. Select all elements <input> which attribute 'name' contains the value 'man' and apply red border to them.
-
-
+    // $('input[name*="man"]').addClass("sel");
 
 });
 </script>

@@ -55,15 +55,13 @@ $( document ).ready(function(){
 
     // Ru: Задание 1. Выбрать элементы <label>, которые следуют после чекбоксов без атрибута disabled, и применить красную рамку к ним.
     // En: Task 1. Select all elements <label> that follow the elements <input> with attribute type='checkbox' and without attribute 'disabled' and apply red border to them.
-
-
-
+    // $("input:checkbox:not([disabled]) + label").addClass('sel');
+    // $("input:checkbox:enabled + label").addClass('sel');
+    // $("input[type=checkbox]:not([disabled]) + label").addClass('sel');
 
     // Ru: Задание 2. Вывести количество элементов <input> с атрибутом type='hidden' в консоль.
     // En: Task 2. Show the number of elements <input> with attribute type='hidden' in console.log.
-
-
-
+    // console.log($("input[type=hidden]").length);
 
 });
 </script>

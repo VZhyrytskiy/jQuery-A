@@ -75,27 +75,23 @@ $( document ).ready(function(){
 
     // Ru: Задание 1. Выбрать все элементы <li> у элемента <ul> с атрибутом class='topnav' и применить к ним красную рамку.
     // En: Task 1. Select all <li> elements from <ul> element with attribute class='topnav' and apply red border to them.
-
-
+    // $("ul.topnav > li").addClass("sel");
 
     // Ru: Задание 2. Выбрать все элементы <ul>, которые вложены в элемент <div> и применить красную рамку к ним.
     // En: Task 2. Select all elements <ul> that are nested in the element <div> and apply red border to them.
-
-
+    // $("div ul").addClass("sel");
 
     // Ru: Задание 3. Выбрать все элементы <span>, которые следуют сразу за элементом <p>, и применить красную рамку к ним.
     // En: Task 3. Select all elements <span> that immediately follow the element <p> and apply red border to them.
-
-
+    // $("p + span").addClass("sel");
 
     // Ru: Задание 4. Выбрать все элементы <div>, которые сразу следуют за элементом <p> с атрибутом id='p2'.
     // En: Task 5. Select all elements <div> that immediately follow the element <p> with attribute id='p2' and apply red border to them.
-
-
+    // $("#p2 + div").addClass("sel"); // Nothing
 
     // Ru: Задание 5. Выбрать все элементы <div>, которые следуют за элементом <p> с атрибутом id='p2'.
     // En: Task 5. Select all elements <div> that follow the element <p> with attribute id='p2' and apply red border to them.
-
+    // $("#p2 ~ div").addClass("sel");
 });
 
 </script>
