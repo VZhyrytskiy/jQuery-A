@@ -56,16 +56,29 @@ $(document).ready(function(){
 
     // Ru: Задание 1. Когда пользователь кликает по ссылке, отменить переход по ссылке и вывести форму используя эффект скольжения. Когда пользователь кликает на <input type="submit">, отменить отправку формы, спрятать форму, используя эффект скольжения и после этого вывести сообщение "Thank you".
     // En: Task 1. When user clicks on the element <a>, prevent default behaviour, show the form using sliding. When user clicks on <input type="submit">, prevent submiting the form, hide form using sliding and after that show the message "Thank you" using alert.
+    // $("a").on("click", event => {
+    //     event.preventDefault();
+    //     $("#d_login").slideDown();
+    // });
 
-
-
+    // $("input[type=submit]").on("click", event => {
+    //     event.preventDefault();
+    //     $("#d_login").slideUp(() => alert("Thank you"));
+    // });
 
     // Ru: Задание 2. Когда пользователь кликает на ссылку, отменить переход по ссылке, показывать/прятать форму с эффектом скольжения и менять текст ссылки "Login/Close Form"
     // En: Task 2. When user clicks on the element <a>, prevent default behaviour, show/hide the form using sliding, change the text of the lilnk "Login/Close Form".
+    // const caption = {
+    //     "Login": "Close Form",
+    //     "Close Form": "Login"
+    // };
 
+    // $("a").on("click", event => {
+    //     event.preventDefault();
 
-
-
+    //     const $a = $(event.target);
+    //     $("#d_login").slideToggle( () => $a.text( caption[$a.text()]));
+    // });
 
 });
 </script>

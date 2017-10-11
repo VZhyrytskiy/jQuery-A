@@ -47,22 +47,29 @@ $(document).ready(function(){
 
     // Ru: Задание 1. Спрятать 1-ый элемент <div>, когда пользователь кликнет на нем.
     // En: Task 1. Hide 1-st element <div>, when user clicks on it.
-
-
+    // $("div:first").on("click", function() {
+    //     $(this).hide(2000);
+    // });
 
     // Ru: Задание 2. Когда пользователь кликнет по параграфах #p1, #p2, прятать текущий параграф со скростью 600 мс. и после этого выводить сообщение с помощью alert "Параграф #p1/#p2(для каждого параграфа выводить свой id) спрятан".
     // En: Task 2. When user clicks on the paragraphs #p1, #p2, hide the current paragraph and after that show message "Paragraph #p1/#p2(for each paragraph their own id) has hidden"
-
-
+    // $("#p1, #p2").on("click", function() {
+    //     $(this).hide(2000, () => {
+    //         alert("Параграф "+ this.id +" спрятан");
+    //     });
+    // });
 
     // Ru: Задание 3. Когда пользователь кликнет по кнопке #btn, показать <div>, который находиться перед ней, со скоростью 600 мс.
     // En: Task 3. When user clicks on the button #btn, show <div>, which there is before this button, with duration 600 ms.
-
-
+    // $("#btn").on("click", function() {
+    //     $(this).prev().show(600);
+    // });
 
     // Ru: Задание 4. Когда пользователь кликает по кнопке #dt, прятать и показывать <div class="c3">, который находится за ней.
     // En: Task 4. When user clicks on the button #dt, hide and show <div class="c3">, which there is after this button.
-
+    // $("#dt").on("click", function() {
+    //     $(this).next().toggle(500);
+    // });
 
 });
 </script>
