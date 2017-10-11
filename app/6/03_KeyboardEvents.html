@@ -22,10 +22,28 @@
 $(document).ready(function(){
         // Ru: Задание 1. Когда пользователь вводит символы в <textarea> выводить "*" в соответствующий <span>", а в последний <span> выводить код клавиши/символа, используя e.which.
         // En: Task 1. When user enter chars in <textarea> set "*" to the appropriate <span> and set char code or key code (use e.which) to the last <span>.
+        // const f = function(selector) {
+        //     $(selector).text((i, oldText) => {
+        //         return oldText + "*";
+        //     });
+        //     $("span:last").text((i, oldText) => {
+        //         return oldText + event.which;
+        //     });
+        // };
 
+        // $("textarea").on({
+        //     "keypress": function(event) {
+        //         f("span:eq(0)");
+        //     },
 
+        //     "keydown": function(event) {
+        //         f("span:eq(1)");
+        //     },
 
-
+        //     "keyup": function(event) {
+        //         f("span:eq(2)");
+        //     }
+        // });
 });
 </script>
 

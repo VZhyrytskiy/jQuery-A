@@ -27,8 +27,24 @@ $(document).ready(function(){
     // Ru: Задание 1. По клику на ссылку создать внутри #divLogin динамически форму из одного текстового поля и кнопки submit. Действие ссылки по умолчанию отменить. В обработчике кнопки submit выводить содержимое текстового поля, используя alert. Запретить отправлять форму.
 
     // En: Task 1. When user clicks on the link, create dynamically form within #divLogin which contains one text field and one button submit. Call preventDefault for the link. In the handler for the submit button, display the contents of the text field using the alert. Call preventDefault for the submit form event.
+    const loginForm = `<form action='myscript.php'>
+                            <label>Логин:</label><br/>
+                            <input type='text' value='' /><br/>
+                            <label>Пароль:</label><br/>
+                            <input type='password' value='' /><br/>
+                            <input type='submit' /><br/>
+                        </form>`;
 
+    $("a").on('click', e => {
+        $("#divLogin").html(loginForm);
+        e.preventDefault();
+    });
 
+    /* работает, динамически привязали к потомку */
+    $("#divLogin").on("click", "input[type=submit]", function(e){
+        e.preventDefault();
+        console.log( $(e.delegateTarget).find("input[type=text]").val() );
+    });
 
     // Ru: Задание 2. Реализовать обработчик события клика по параграфу, который выводит (alert) содержимое параграфа, привязвать к параграфу.
     // По клику на кнопке Button #1, запустить собитие клика на параграфе с помощью trigger()
@@ -37,7 +53,17 @@ $(document).ready(function(){
     // En: Task 2. Implement an event handler of a click on the paragraph that shows (alert) the content of paragraph, bind the paragraph.
     // By clicking on the button Button # 1, run the click event on paragraph using trigger ()
     // By clicking on the button Button # 2, run the click event on paragraph using triggerHandler ().
+    // $("p").on("click", function() {
+    //     alert( $(this).text() );
+    // });
 
+    // $("div > button:first").on("click", function() {
+    //     $("p").trigger("click");
+    // });
+
+    // $("div > button:last").on("click", function() {
+    //     $("p").triggerHandler("click");
+    // });
 
 
 });

@@ -56,16 +56,53 @@ $(document).ready(function(){
     // En: Task 1. When user presses left mouse button (event.which == 1) on the element ul.topnav, add class "sel" to this element and set the text = "We are ready to moving", set the color of text - red.
     // When user releases left mouse button (event.which == 1) on the element ul.topnav, remove class "sel" from the current element and clear last <span>.
     // When the user moves the mouse while holding down the left mouse button, display the coordinates of the mouse in the last <span>, using function(event){ event.pageX, event.pageY ...}
+    // $("ul.topnav").on({
+    //     "mousedown": function( event ){
+    //         if ( event.which === 1 ) {
+    //             $(this).addClass("sel");
+    //             $("span:last").text("Готовы к движению")
+    //                         .css("color", "red");
+    //         }
+    //     },
 
+    //     "mouseup": function( event ) {
+    //         if ( event.which === 1 ) {
+    //             $(this).removeClass("sel");
+    //             $("span:last").empty();
+    //         }
+    //     },
+
+    //     "mousemove": function( event ){
+    //         if ( event.which === 1 ) {
+    //             $("span:last").text(event.pageX + ";" + event.pageY);
+    //         }
+    //     }
+    // });
 
 
     // Ru: Задание 2. Когда пользователь наводит мышку на пункт последнего списка, добавлять после текста пункта элемент <span> c текстом красного цвета - переводом на русский: Молоко, Хлеб, Чипсы, Сок. Установить для span левый отступ 10px. Когда мышка покидает пункт списка, удалять <span>
-
     // En: Task 2. When the user moves the mouse on the item of last list, add element <span> after the text list item with red text - translation into Russian: Молоко, Хлеб, Чипсы, Сок. Set the value of margin-left for the <span> to 10px. When the mouse leaves the item in the list, delete <span>
+    // const translation = {
+    //     "Milk" : "Молоко",
+    //     "Bread" : "Хлеб",
+    //     "Chips" : "Чипсы",
+    //     "Juice" : "Сок"
+    // };
+    // $("ul:last").children().on({
+    //     "mouseenter": function() {
+    //         $("<span />", {
+    //             css: {
+    //                 "color": "red",
+    //                 "marginLeft": "10px"
+    //             },
+    //             text: translation[ $(this).text() ]
+    //         }).appendTo( this );
+    //     },
 
-
-
-
+    //     "mouseleave": function() {
+    //         $(this).find("span").remove();
+    //     }
+    // });
 });
 </script>
 
