@@ -22,8 +22,8 @@ $(document).ready(function(){
 
     // Ru: Задание 1. Вывести в консоль .height(), .css("width") 1-го  элемента <div>
     // En: Task 1. Show the value of .height(), .css("width") for 1-st element <div> in console.log.
-
-
+    // console.log($("div:first").css("height"));  // возвращает значение с ед.изм.
+    // console.log($("div:first").height());       // возвращает значение без ед.изм.
 
     // Ru: Задание 2. Реализовать обработчик события "click" для 2-го и 3-го <div> согласно требований ниже:
     //    1)    установить высоту и ширину в 100px для следующего <div> относительно текущего <div>,
@@ -33,8 +33,9 @@ $(document).ready(function(){
     //    1) setup height and width equal 100px for the next <div> relative to the current <div>
     //    2) setup height and width equal 50px for the previous <div> relative to the current <div>
     // Use chanability.
-
-
+    // $("div:not(:first):not(:last)").click(function(){
+    //     $(this).next().width(100).prev().prev().width(50);
+    // });
 
     // Ru: Задание 3. Реализовать обработчик события "click" для 3-го <div> согласно требований ниже:
     //    1) получить значение его width+padding, width+padding+border
@@ -56,7 +57,27 @@ $(document).ready(function(){
     //        background-color - yellow,
     //        color - blue
     //        text - "newDiv"
+    // $("div:eq(2)").on("click", function() {
+    //     const innerWidth = $(this).innerWidth() / 2,
+    //         outerWidthBorder = $(this).outerWidth() / 2;
 
+    //     $("<div />", {
+    //         "id": "newDiv",
+    //         css : {
+    //             width: innerWidth,
+    //             height: outerWidthBorder,
+    //             backgroundColor: "yellow",
+    //             color: "blue"
+    //         },
+    //         text: "newDiv",
+    //         "click": function() {
+    //             console.log("click");
+    //         }
+    //         /* еще один атрибут
+    //         "val": "some value"
+    //         */
+    //     }).appendTo("div:eq(3)");
+    // });
 
 
 });

@@ -30,15 +30,21 @@ $(document).ready(function(){
     //    1) get the value of their css property "background-color",
     //    2) create new <div> after last <div>, and put the value of above css property as a content of <div>. <div> elements should not multiply after each click.
     //  3) setup color of the text according to the value of "background-color"
-
-
+    // $("div:eq(0), div:eq(1)").on("click", function() {
+    //     const $this = $(this);
+    //     const text = $this.css("backgroundColor");
+    //     $(".d").remove();
+    //     const $newDiv = $("<div class='d'>" + text + "</div>").css("color", text);
+    //     $this.parent().append($newDiv);
+    // });
 
     // Ru: Задание 2. Реализовать обработчик события "click" для div.sel согласно требования ниже:
     //    1) получить значение css свойства "border-top-color" и вывести его в span#result.
     // En: Task 2. Create "click" event handler for div.sel according to following requirements:
     //    1) get the value of its css property "border-top-color" and put it into span#result.
-
-
+    // $("div.sel").click(function(){
+    //     $("#result").text($(this).css("borderTopColor"))
+    // });
 
     // Ru: Задание 3. Реализовать обработчики событий "mouseover" и "mouseout" для каждого <div> согласно требований ниже:
     //    1) mouseover: измененить ширину с текущего значения на новое значение 100px и увеличить высоту на 50px,
@@ -46,19 +52,34 @@ $(document).ready(function(){
     // En: Task 3. Create "mouseover" and "mouseout" events handlers for each <div> according to following requirements:
     //    1) mouseover: change the width from current value to 100px and increase the height by 50px,
     //    2) mouseout: return back the width to 60px, and return back the hight to the previous value.
+    // $("div").on({
+    //      "mouseover": function() {
+    //         $(this).css({
+    //             "width": "100",
+    //             "height": "+=50"
+    //         });
+    //     },
 
-
+    //     "mouseout": function(){
+    //         $(this).css("width", "60")
+    //                 .css("height", "-=50");
+    //     }
+    // });
 
     // Ru: Задание 4. Реализовать обработчик события "click" для 2-4-го <div>  согласно требований ниже:
     //    1) увеличить их высоту и ширину на 20%.
     // En: Task 4. Create "click" event handler for 2-4th <div> according to following requirements:
     //    1) increase their height and width by 20%.
-
-
-
-
-
-
+    // $("div").slice(1,5).click(function() {
+    //     $(this).css({
+    //         width: function(index, value) {
+    //         return parseFloat(value) * 1.2;
+    //         },
+    //         height: function(index, value) {
+    //         return parseFloat(value) * 1.2;
+    //         }
+    //     });
+    // });
 });
 </script>
 
