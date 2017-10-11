@@ -69,11 +69,27 @@ $(document).ready(function(){
 
     // Ru: Задание 1. При клике на параграфе заменять его на элемент <textarea> с HTML-содержимым параграфа
     // En: Task 1. When user clicks on the element <p>, repace it for the element <textarea> with html content of element <p>.
-
-
+    // $("p").on("click", function() {
+    //     $(this).replaceWith("<textarea>"+ $(this).html() +"</textarea>");
+    // });
 
     // Ru: Задание 2. При клике на любой ячейке в столбцах а и b показывать <input type="text"> для ввода числа. При клике на другой ячейке в этих же столбцах, предыдущий <input type="text"> прятать, выполнять  пересчет для последней ячейки, выводить новый <input type="text"> для текущей ячейки.
     // En: Task 2. When user clicks on any cell in columns a and b, show element <input type="text"> and allow user to input number. When user clicks on any other cell in the same columns, hide previous <input type="text">, calculate the value for the last cell, show new <input type="text"> in the current cell.
+    $("tr:eq(1) > td:lt(2)").on("click", function() {
+        const $this = $(this);
+
+        if ( !$this.children().is("input") ) {
+
+            const $input = $this.closest("tr").find("input");
+
+            $input.length > 0 && $input.replaceWith( $input.val() );
+
+            $("tr:eq(1) > td:eq(2)").html( +$("tr:eq(1) > td:eq(0)").text() +
+                                           +$("tr:eq(1) > td:eq(1)").text() );
+
+            $this.html("<input type='text' value='" + $this.text() +"'>").find("input").focus();
+        }
+    });
 
 
 

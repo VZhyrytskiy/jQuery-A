@@ -105,19 +105,15 @@ $(document).ready(function(){
 
     // Ru: Задание 1. Удалить все элементы <span class="blue">.
     // En: Task 1. Delete all elements <span class="blue">.
-
-
-
+    // $("span.blue").remove();
 
     // Ru: Задание 2. Удалить контент у элемента <div class="blue">.
     // En: Task 3. Delete the content of element <div class="blue">.
-
-
+    // $("div.blue").empty()
 
     // Ru: Задание 3. Удалить родительский элемент у <span class="blue">.
     // En: Task 3. Delete the parent element of element <span class="blue">.
-
-
+    // $("span.blue").unwrap();
 
     // Ru: Задание 4. Преобразовать элемент <div id="cars"> одной цепочкой команд:
     // 1) убрать <br>
@@ -127,13 +123,22 @@ $(document).ready(function(){
     // 1) Delete all elements <br>
     // 2) Wrap all even element <a> with a structure <li></li> and wrap all odd element <a> with a structure <li><span class="sel"></span></li>
     // 3) Replace <div id="cars"> for <ul id="cars">
+    // const v = $("#cars")
+    //             .find("br").remove().end()
+    //             .children().wrap(function(index){
+    //                 if (index % 2 == 0) return '<li></li>';
+    //                 else return '<li><span class="sel"></span></li>';
+    //             })
+    //             .closest("li").unwrap().wrapAll("<ul id='cars'></ul>")
 
-
-
+    // console.log(v);
 
     // Ru: Задание 5. Когда пользователь кликает по кнопке #btnDelete, удалять выделенные с помощью чекбокса строки таблицы #myTable
     // En: Задание 5. When user clicks on the button #btnDelete, delete the checked rows (checked by checkbox) from the table #myTable
-
+    // $("#btnDelete").on("click", () => {
+    //     $("tbody > tr > td > input:checked").parent().parent().remove();
+    //     $("#myTable").find("input:checked").closest("tr").remove();
+    // });
 
 
 

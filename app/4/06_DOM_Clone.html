@@ -56,13 +56,12 @@ $(document).ready(function(){
     // Ru: Задание 1. Создать копию первого элемента <p> и поместить его в конец документа
     // так, чтобы для него тоже срабатывал обработчик, реализованный выше.
     // En: Task 1. Create the clone of 1-st element <p> and insert it at the end of the document. Event handler for event 'click' which is above should work for this clone element as well.
-
-
-
+    // $("p:first").clone(true).appendTo("body");
 
     // Ru: Задание 2. Получить HTML-разметку отобраного элемента в элементе <body> вместе с открывающим и закрывающим тегами.
     // En: Task 2. Get the HTML-markup of selected element in element <body> with open and close tags.
-
+    // const v = $("p.inner").clone().wrapAll("<div></div>").parent().html();
+    // console.log(v);
 
 
 });
