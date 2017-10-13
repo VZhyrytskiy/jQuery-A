@@ -1,4 +1,4 @@
-$(document).ready(function(){
+$(function(){
 
     // variable to hold request
     let request;
